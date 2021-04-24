@@ -1,14 +1,6 @@
 // Const Keys
-const currentLocale = 'currentLocale';
 const themeModeKey = 'themeModeKey';
-
-// Path to save base locale
-const BaseLocalePath = 'baseLocale';
-
-// Base locale name file
-const IdLocale = 'id_base_locale';
-const EnLocale = 'en_base_locale';
-const baseLocaleName = 'baseLocaleName.txt';
+const accessToken = 'access_token';
 
 // App Name
 const APP_TITLE = 'Freelance App';

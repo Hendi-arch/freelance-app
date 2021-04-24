@@ -38,6 +38,7 @@ class UserData {
   String? createdAt;
   int? id;
   String? imageUrl;
+  String? password;
   List<Roles>? roles = [];
 
   UserData(
@@ -51,6 +52,7 @@ class UserData {
         this.createdAt,
         this.id,
         this.imageUrl,
+        this.password,
         this.roles});
 
   UserData.fromJson(Map<String, dynamic> json) {
@@ -86,6 +88,15 @@ class UserData {
     if (this.roles != null) {
       data['roles'] = this.roles!.map((v) => v.toJson()).toList();
     }
+    return data;
+  }
+
+  Map<String, dynamic> postToJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['name'] = this.name;
+    data['email'] = this.email;
+    data['password'] = this.password;
+    data['mobile_phone'] = this.mobilePhone;
     return data;
   }
 }

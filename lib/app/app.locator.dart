@@ -11,6 +11,7 @@ import 'package:stacked/stacked.dart';
 
 import '../core/api/api.dart';
 import '../core/services/api_service.dart';
+import '../core/services/reactive_value_service.dart';
 import '../core/services/theme_service.dart';
 import '../core/services/utility_service.dart';
 import '../shared/size_config.dart';
@@ -24,5 +25,6 @@ void setupLocator() {
   locator.registerLazySingleton(() => Api());
   locator.registerLazySingleton(() => SizeConfig());
   locator.registerLazySingleton(() => ThemeService());
+  locator.registerLazySingleton(() => ReactiveValueService());
   locator.registerFactory(() => ApiService());
 }
