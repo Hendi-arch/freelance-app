@@ -18,7 +18,7 @@ import '../shared/size_config.dart';
 final locator = StackedLocator.instance;
 
 void setupLocator() {
-  locator.registerLazySingleton(() => DialogService());
+  locator.registerLazySingleton(() => BottomSheetService());
   locator.registerLazySingleton(() => NavigationService());
   locator.registerLazySingleton(() => UtilityService());
   locator.registerLazySingleton(() => Api());

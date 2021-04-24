@@ -27,7 +27,7 @@
     },
     {
       "name": "basic_services",
-      "rootUri": "file:///Users/hendinoviansyah/PROJECTS/flutter/.pub-cache/git/basic_services-65a334641b7b4d06ef569a8a464d1d3bb059cb6b/",
+      "rootUri": "file:///Users/hendinoviansyah/PROJECTS/flutter/.pub-cache/git/basic_services-42ac19bb3a087d3f14a6fa3d5515e98906982043/",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -560,7 +560,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-04-23T17:04:22.484437Z",
+  "generated": "2021-04-24T17:30:25.044120Z",
   "generator": "pub",
-  "generatorVersion": "2.12.2"
+  "generatorVersion": "2.12.3"
 }

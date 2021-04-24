@@ -28,7 +28,7 @@ dependencies:
   basic_services: # bundle of services
     git:
       url: https://github.com/Hendi-arch/basic_services.git
-      ref: 65a334641b7b4d06ef569a8a464d1d3bb059cb6b
+      ref: 42ac19bb3a087d3f14a6fa3d5515e98906982043
 
 dev_dependencies:
   flutter_test:

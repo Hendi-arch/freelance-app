@@ -11,7 +11,7 @@ class ThemeService {
 
   ReactiveValue<bool> valueSwitch = ReactiveValue<bool>(true);
 
-  ReactiveValue<ThemeData?> appTheme = ReactiveValue<ThemeData?>(lightTheme());
+  ReactiveValue<ThemeData?> appTheme = ReactiveValue<ThemeData?>(darkTheme());
 
   void setAppTheme(bool param) {
     if (param) {

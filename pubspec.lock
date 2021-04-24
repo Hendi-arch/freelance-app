@@ -33,8 +33,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "65a334641b7b4d06ef569a8a464d1d3bb059cb6b"
-      resolved-ref: "65a334641b7b4d06ef569a8a464d1d3bb059cb6b"
+      ref: "42ac19bb3a087d3f14a6fa3d5515e98906982043"
+      resolved-ref: "42ac19bb3a087d3f14a6fa3d5515e98906982043"
       url: "https://github.com/Hendi-arch/basic_services.git"
     source: git
     version: "1.0.0+1"

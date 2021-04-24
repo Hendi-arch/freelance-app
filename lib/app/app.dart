@@ -1,3 +1,4 @@
+import 'package:freelance_app/ui/views/outside/login/login_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 
 // route name
@@ -18,9 +19,10 @@ import 'package:freelance_app/ui/views/startup/start_up_view.dart';
 
 @StackedApp(routes: [
   AdaptiveRoute(page: StartUpView, initial: true, path: root),
+  AdaptiveRoute(page: LoginView, path: login),
 ], dependencies: [
   // Singleton Injections
-  LazySingleton(classType: DialogService),
+  LazySingleton(classType: BottomSheetService),
   LazySingleton(classType: NavigationService),
   LazySingleton(classType: UtilityService),
   LazySingleton(classType: Api),

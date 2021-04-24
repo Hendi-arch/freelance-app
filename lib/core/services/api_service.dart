@@ -32,7 +32,6 @@ class ApiService extends BasicApiService {
       Map<String, dynamic>? headers,
       Map<String, dynamic>? query}) async {
     Map<String, dynamic> _headers = Map<String, dynamic>();
-    if (token != null) _headers['Authorization'] = "Token token=$token";
     dio.Response response;
     response = await _dioInstance
         .get(url,
@@ -53,7 +52,6 @@ class ApiService extends BasicApiService {
       Map<String, dynamic>? headers,
       Map<String, dynamic>? query}) async {
     Map<String, dynamic> _headers = Map<String, dynamic>();
-    if (token != null) _headers['Authorization'] = "Token token=$token";
     dio.Response response;
     response = await _dioInstance
         .post(url,

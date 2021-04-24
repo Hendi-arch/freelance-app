@@ -24,7 +24,7 @@ final InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
     hintStyle: appTextTheme().bodyText1!.apply(color: kGrayDark),
     helperStyle: appTextTheme().overline!.apply(color: kGrayDark),
     border: OutlineInputBorder(borderRadius: BorderRadius.circular(4.0)),
-    contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
+    contentPadding: const EdgeInsets.symmetric(horizontal: 20),
     enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(4.0)),
     focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(4.0)),
     focusedErrorBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(4.0)),
