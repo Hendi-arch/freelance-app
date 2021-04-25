@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freelance_app/ui/widgets/basic/custom_text_widget.dart';
 
-class Title extends StatelessWidget {
+class TitleView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Align(

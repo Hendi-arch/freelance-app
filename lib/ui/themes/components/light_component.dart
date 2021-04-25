@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:freelance_app/ui/themes/colors/app_colors.dart';
 
 final ColorScheme lightColorScheme = ColorScheme.light(
-  primary: kPrimaryLight,
-  background: kBackgroundLight,
-  secondary: kBackgroundLight,
-  surface: kLight,
   error: kError,
   brightness: Brightness.light,
 );
@@ -20,9 +16,9 @@ final DialogTheme lightDialogTheme = DialogTheme(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)), backgroundColor: lightColorScheme.surface);
 
 final InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
-    labelStyle: appTextTheme().overline!.apply(color: kGrayLight),
-    hintStyle: appTextTheme().bodyText1!.apply(color: kGrayLight),
-    helperStyle: appTextTheme().overline!.apply(color: kGrayLight),
+    labelStyle: lightAppTextTheme().overline!.apply(color: kGrayLight),
+    hintStyle: lightAppTextTheme().bodyText1!.apply(color: kGrayLight),
+    helperStyle: lightAppTextTheme().overline!.apply(color: kGrayLight),
     border: OutlineInputBorder(borderRadius: BorderRadius.circular(4.0)),
     contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 22),
     enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(4.0)),

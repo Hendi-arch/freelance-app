@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:freelance_app/ui/themes/colors/app_colors.dart';
 
 final ColorScheme darkColorScheme = ColorScheme.dark(
-  primary: kPrimaryDark,
-  background: kBackgroundDark,
-  secondary: kBackgroundDark,
-  surface: kDark,
   error: kError,
   brightness: Brightness.dark,
 );
@@ -20,9 +16,9 @@ final DialogTheme darkDialogTheme = DialogTheme(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)), backgroundColor: darkColorScheme.surface);
 
 final InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
-    labelStyle: appTextTheme().overline!.apply(color: kGrayDark),
-    hintStyle: appTextTheme().bodyText1!.apply(color: kGrayDark),
-    helperStyle: appTextTheme().overline!.apply(color: kGrayDark),
+    labelStyle: darkAppTextTheme().overline!.apply(color: kGrayDark),
+    hintStyle: darkAppTextTheme().bodyText1!.apply(color: kGrayDark),
+    helperStyle: darkAppTextTheme().overline!.apply(color: kGrayDark),
     border: OutlineInputBorder(borderRadius: BorderRadius.circular(4.0)),
     contentPadding: const EdgeInsets.symmetric(horizontal: 20),
     enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(4.0)),

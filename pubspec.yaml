@@ -24,6 +24,9 @@ dependencies:
   # cupertinoIcons class for iOS style icons ( null safety )
   cupertino_icons: ^1.0.2
 
+  # show images from the internet and keep them in the cache directory. ( null safety )
+  cached_network_image: ^3.0.0
+
   # local repo packages ( null safety )
   basic_services: # bundle of services
     git:

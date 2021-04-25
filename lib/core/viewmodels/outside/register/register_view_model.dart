@@ -61,4 +61,6 @@ class RegisterViewModel extends BaseViewModel with ExceptionServiceMixin {
           busyObject: registerEventKey);
     }
   }
+
+  Future navigateToLogin() async => _navigationService.clearStackAndShow(login);
 }

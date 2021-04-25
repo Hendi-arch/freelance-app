@@ -31,13 +31,12 @@ class ApiService extends BasicApiService {
       responseType = dio.ResponseType.json,
       Map<String, dynamic>? headers,
       Map<String, dynamic>? query}) async {
-    Map<String, dynamic> _headers = Map<String, dynamic>();
     dio.Response response;
     response = await _dioInstance
         .get(url,
             queryParameters: query,
             cancelToken: cancelToken,
-            options: dio.Options(responseType: dio.ResponseType.json, headers: _headers),
+            options: dio.Options(responseType: dio.ResponseType.json, headers: headers),
             onReceiveProgress: (count, total) => print((count / total * 100).toStringAsFixed(0) + "%"))
         .timeout(const Duration(seconds: TIMEOUT_DURATION))
         .whenComplete(() => _dioInstance.clear());
@@ -51,14 +50,13 @@ class ApiService extends BasicApiService {
       responseType = dio.ResponseType.json,
       Map<String, dynamic>? headers,
       Map<String, dynamic>? query}) async {
-    Map<String, dynamic> _headers = Map<String, dynamic>();
     dio.Response response;
     response = await _dioInstance
         .post(url,
             data: data,
             queryParameters: query,
             cancelToken: cancelToken,
-            options: dio.Options(responseType: dio.ResponseType.json, headers: _headers),
+            options: dio.Options(responseType: dio.ResponseType.json, headers: headers),
             onReceiveProgress: (count, total) => print((count / total * 100).toStringAsFixed(0) + "%"),
             onSendProgress: (received, total) => print((received / total * 100).toStringAsFixed(0) + "%"))
         .timeout(const Duration(seconds: TIMEOUT_DURATION))

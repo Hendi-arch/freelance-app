@@ -1,6 +1,7 @@
 import 'package:basic_services/basic_services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:freelance_app/app/app.locator.dart';
+import 'package:freelance_app/app/route_name.dart';
 import 'package:freelance_app/core/constant/constant.dart';
 import 'package:freelance_app/core/model/error/error_model.dart';
 import 'package:freelance_app/core/services/reactive_value_service.dart';
@@ -13,6 +14,7 @@ class LoginViewModel extends BaseViewModel with ExceptionServiceMixin {
   final _reactiveValueService = locator<ReactiveValueService>();
   final _sharedPrefsService = locator<SharedPreferencesService>();
   final _bottomSheetService = locator<BottomSheetService>();
+  final _navigationService = locator<NavigationService>();
 
   final TextEditingController mobileOrPhone = TextEditingController();
   final TextEditingController password = TextEditingController();
@@ -40,14 +42,17 @@ class LoginViewModel extends BaseViewModel with ExceptionServiceMixin {
   Future login() async {
     if (formKey.currentState!.validate()) {
       await runBusyFuture(
-          _loginApiAction.login(userName: mobileOrPhone.text, password: password.text).then((value) {
+          _loginApiAction.login(userName: mobileOrPhone.text, password: password.text).then((value) async {
             // do logic after success login
             _sharedPrefsService.saveToDisk(accessToken, value.accessToken);
             _reactiveValueService.userData.value = value.userData;
 
-            _bottomSheetService.showBottomSheet(title: value.message ?? 'Success login');
+            await _bottomSheetService.showBottomSheet(title: value.message ?? 'Success login');
+            _navigationService.clearStackAndShow(dashboard);
           }),
           busyObject: loginEventKey);
     }
   }
+
+  Future navigateToRegister() async => _navigationService.clearStackAndShow(register);
 }
