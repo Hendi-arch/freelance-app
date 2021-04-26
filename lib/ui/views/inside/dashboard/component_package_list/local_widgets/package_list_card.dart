@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:freelance_app/app/app.locator.dart';
-import 'package:freelance_app/core/model/inside/user_service/user_service_model.dart';
+import 'package:freelance_app/core/model/inside/package_list/package_list_model.dart';
+import 'package:freelance_app/core/viewmodels/inside/dashboard/component_package_list/component_package_list_view_model.dart';
 import 'package:freelance_app/shared/size_config.dart';
 import 'package:freelance_app/ui/themes/colors/app_colors.dart';
 import 'package:freelance_app/ui/widgets/basic/custom_base_cache_image.dart';
 import 'package:freelance_app/ui/widgets/basic/custom_text_widget.dart';
+import 'package:intl/intl.dart';
+import 'package:stacked/stacked.dart';
 
-class ServiceCard extends StatelessWidget {
+class PackageListCard extends ViewModelWidget<ComponentPackageListViewModel> {
   final Data? data;
 
-  ServiceCard({Key? key, this.data}) : super(key: key);
+  PackageListCard({Key? key, this.data}) : super(key: key, reactive: false);
 
   final _sizeConfig = locator<SizeConfig>();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, viewModel) {
     return Container(
       width: _sizeConfig.getWidth(164),
-      height: _sizeConfig.getHeight(281),
+      height: _sizeConfig.getHeight(290),
       margin: const EdgeInsets.all(5.0),
       decoration: BoxDecoration(
         color: kDark,
@@ -45,7 +48,13 @@ class ServiceCard extends StatelessWidget {
           Align(
             alignment: const Alignment(-0.75, 0.0),
             child: CustomTextWidget(
-                textToDisplay: data?.serviceName ?? '',
+                textToDisplay: data?.packageName ?? '',
+                textStyle: Theme.of(context).textTheme.subtitle1!.copyWith(fontWeight: FontWeight.bold)),
+          ),
+          Align(
+            alignment: const Alignment(-0.75, 0.0),
+            child: CustomTextWidget(
+                textToDisplay: 'Rp ${NumberFormat.decimalPattern().format(int.parse(data!.priceMax!))}',
                 textStyle: Theme.of(context).textTheme.subtitle1!.copyWith(fontWeight: FontWeight.bold)),
           )
         ],

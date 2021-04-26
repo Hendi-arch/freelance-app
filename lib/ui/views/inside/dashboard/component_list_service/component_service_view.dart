@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:freelance_app/core/viewmodels/inside/dashboard/dashboard_view_model.dart';
-import 'package:freelance_app/ui/views/inside/dashboard/local_widgets/dashboard_widgets.dart';
+import 'package:freelance_app/core/viewmodels/inside/dashboard/component_service/component_service_view_model.dart';
 import 'package:stacked/stacked.dart';
 
-class DashboardView extends StatelessWidget {
+import 'local_widgets/component_service_widgets.dart';
+
+class ComponentServiceView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<DashboardViewModel>.nonReactive(
-        viewModelBuilder: () => DashboardViewModel(),
+    return ViewModelBuilder<ComponentServiceViewModel>.nonReactive(
+        viewModelBuilder: () => ComponentServiceViewModel(),
         onModelReady: (viewModel) => viewModel.getUserService(),
         builder: (_, viewModel, ___) {
           return Scaffold(

@@ -48,7 +48,7 @@ class LoginViewModel extends BaseViewModel with ExceptionServiceMixin {
             _reactiveValueService.userData.value = value.userData;
 
             await _bottomSheetService.showBottomSheet(title: value.message ?? 'Success login');
-            _navigationService.clearStackAndShow(dashboard);
+            _navigationService.clearStackAndShow(componentService);
           }),
           busyObject: loginEventKey);
     }

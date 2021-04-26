@@ -1,4 +1,5 @@
 const root = '/';
 const login = 'login';
 const register = 'register';
-const dashboard = 'dashboard';
+const componentService = 'component-service';
+const componentPackageList = 'component-package-list';

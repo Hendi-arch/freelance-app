@@ -23,10 +23,18 @@ class LoginView extends StatelessWidget {
                 children: [
                   TitleView(),
                   FormInput(),
-                  CustomArrow(caption: 'Sign up', onPressed: () => viewModel.navigateToRegister(), dy: 0.28),
-                  LoginButton(),
                 ],
               ),
+            ),
+          ),
+          bottomNavigationBar: Padding(
+            padding: const EdgeInsets.only(bottom: 30),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CustomArrow(caption: 'Sign up', onPressed: () => viewModel.navigateToRegister(), dy: 0.28),
+                LoginButton(),
+              ],
             ),
           ),
         ),

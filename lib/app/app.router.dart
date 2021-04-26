@@ -8,7 +8,8 @@
 
 import 'package:stacked/stacked.dart';
 
-import '../ui/views/inside/dashboard/dashboard_view.dart';
+import '../ui/views/inside/dashboard/component_list_service/component_service_view.dart';
+import '../ui/views/inside/dashboard/component_package_list/component_package_list_view.dart';
 import '../ui/views/outside/login/login_view.dart';
 import '../ui/views/outside/register/register_view.dart';
 import '../ui/views/startup/start_up_view.dart';
@@ -17,12 +18,14 @@ class Routes {
   static const String startUpView = '/';
   static const String loginView = 'login';
   static const String registerView = 'register';
-  static const String dashboardView = 'dashboard';
+  static const String componentServiceView = 'component-service';
+  static const String componentPackageListView = 'component-package-list';
   static const all = <String>{
     startUpView,
     loginView,
     registerView,
-    dashboardView,
+    componentServiceView,
+    componentPackageListView,
   };
 }
 
@@ -33,7 +36,8 @@ class StackedRouter extends RouterBase {
     RouteDef(Routes.startUpView, page: StartUpView),
     RouteDef(Routes.loginView, page: LoginView),
     RouteDef(Routes.registerView, page: RegisterView),
-    RouteDef(Routes.dashboardView, page: DashboardView),
+    RouteDef(Routes.componentServiceView, page: ComponentServiceView),
+    RouteDef(Routes.componentPackageListView, page: ComponentPackageListView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
@@ -56,9 +60,15 @@ class StackedRouter extends RouterBase {
         settings: data,
       );
     },
-    DashboardView: (data) {
+    ComponentServiceView: (data) {
       return buildAdaptivePageRoute<dynamic>(
-        builder: (context) => DashboardView(),
+        builder: (context) => ComponentServiceView(),
+        settings: data,
+      );
+    },
+    ComponentPackageListView: (data) {
+      return buildAdaptivePageRoute<dynamic>(
+        builder: (context) => ComponentPackageListView(),
         settings: data,
       );
     },

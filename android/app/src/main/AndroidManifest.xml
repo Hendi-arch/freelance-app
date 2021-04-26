@@ -1,7 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.freelance_app">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
    <application
-        android:label="freelance_app"
+        android:label="Freelance App"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

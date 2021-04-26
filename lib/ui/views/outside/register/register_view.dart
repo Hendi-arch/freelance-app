@@ -23,10 +23,18 @@ class RegisterView extends StatelessWidget {
                 children: [
                   TitleView(),
                   FormInput(),
-                  CustomArrow(caption: 'Login', onPressed: () => viewModel.navigateToLogin(), dy: 0.45),
-                  RegisterButton(),
                 ],
               ),
+            ),
+          ),
+          bottomNavigationBar: Padding(
+            padding: const EdgeInsets.only(bottom: 30),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CustomArrow(caption: 'Login', onPressed: () => viewModel.navigateToLogin(), dy: 0.45),
+                RegisterButton(),
+              ],
             ),
           ),
         ),

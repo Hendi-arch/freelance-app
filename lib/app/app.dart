@@ -1,3 +1,4 @@
+import 'package:freelance_app/ui/views/inside/dashboard/component_package_list/component_package_list_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 
 // route name
@@ -18,13 +19,14 @@ import 'package:freelance_app/shared/size_config.dart';
 import 'package:freelance_app/ui/views/startup/start_up_view.dart';
 import 'package:freelance_app/ui/views/outside/login/login_view.dart';
 import 'package:freelance_app/ui/views/outside/register/register_view.dart';
-import 'package:freelance_app/ui/views/inside/dashboard/dashboard_view.dart';
+import 'package:freelance_app/ui/views/inside/dashboard/component_list_service/component_service_view.dart';
 
 @StackedApp(routes: [
   AdaptiveRoute(page: StartUpView, initial: true, path: root),
   AdaptiveRoute(page: LoginView, path: login),
   AdaptiveRoute(page: RegisterView, path: register),
-  AdaptiveRoute(page: DashboardView, path: dashboard)
+  AdaptiveRoute(page: ComponentServiceView, path: componentService),
+  AdaptiveRoute(page: ComponentPackageListView, path: componentPackageList)
 ], dependencies: [
   // Singleton Injections
   LazySingleton(classType: BottomSheetService),
